@@ -41,7 +41,7 @@ public class ContaBancaria {
 	@Override
 	public String toString() {
 		return    String.format("Conta Bancaria:%nNumero da Conta = %d, ", numeroConta)				 
-				+ String.format("Nome da Conta = %s, ", nomeConta)   
+				+ String.format("Titular da Conta = %s, ", nomeConta)   
 				+ String.format("Deposito da Conta = %.2f", depositoConta);
 				
 	}
