@@ -9,15 +9,15 @@ public class ProgramaBanco {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner teclado = new Scanner (System.in);
-		double depositodaConta = 0;
+		double saldodaConta = 0;
 		
 		//Entradas
 		System.out.println("Informe Numero da Conta");		
 		int numerodaConta = teclado.nextInt();
 		
-		System.out.println("Informe Nome da Conta");
+		System.out.println("Informe o Titular da Conta");
 		teclado.nextLine();
-		String nomedaConta = teclado.nextLine();
+		String titulardaConta = teclado.nextLine();
 		
 		System.out.println("Deseja fazer um deposito Inicial? (S/N)");
 		char resposta = teclado.next().charAt(0);
@@ -26,20 +26,20 @@ public class ProgramaBanco {
 		//Verifica Condição da respota
 		if (resposta == 'S' || resposta == 's') {
 			System.out.println("Qual valor do Deposito?");
-			depositodaConta = teclado.nextDouble();
+			saldodaConta = teclado.nextDouble();
 		} 
 		//Instanciando Objeto ContaBancaria + Construtor
-		ContaBancaria contabancaria = new ContaBancaria(numerodaConta, nomedaConta, depositodaConta);
+		ContaBancaria contabancaria = new ContaBancaria(numerodaConta, titulardaConta, saldodaConta);
 		System.out.println(contabancaria);
 		//Chamando método adicionaSaldo
 		System.out.println("Informe outro valor de Deposito:");
-		double valor2 = teclado.nextDouble();
-		contabancaria.adicionaSaldo(valor2);
+		double deposito = teclado.nextDouble();
+		contabancaria.adicionaSaldo(deposito);
 		System.out.println("Saldo Atualizado da " + contabancaria);	
 		//Chamando método removeSaldo
 		System.out.println("Informe um valor de Saque:");
-		double valor3 = teclado.nextDouble();
-		contabancaria.removeSaldo(valor3);
+		double saque = teclado.nextDouble();
+		contabancaria.removeSaldo(saque);
 		System.out.println("Saldo Atualizado da " + contabancaria);	
 	
 		teclado.close();		
