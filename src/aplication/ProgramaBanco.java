@@ -27,9 +27,7 @@ public class ProgramaBanco {
 		if (resposta == 'S' || resposta == 's') {
 			System.out.println("Qual valor do Deposito?");
 			depositodaConta = teclado.nextDouble();
-		} else {
-		
-		}
+		} 
 		//Instanciando Objeto ContaBancaria + Construtor
 		ContaBancaria contabancaria = new ContaBancaria(numerodaConta, nomedaConta, depositodaConta);
 		System.out.println(contabancaria);
