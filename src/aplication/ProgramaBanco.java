@@ -7,7 +7,6 @@ import entities.ContaBancaria;
 public class ProgramaBanco {
 
 	public static void main(String[] args) {
-		//Locale,Scanner,Variavel
 		Locale.setDefault(Locale.US);
 		Scanner teclado = new Scanner (System.in);
 		double depositodaConta = 0;
@@ -24,7 +23,7 @@ public class ProgramaBanco {
 		char resposta = teclado.next().charAt(0);
 		
 		
-		//Verifica Condição da respota
+		//Verifica CondiÃ§Ã£o da respota
 		if (resposta == 'S' || resposta == 's') {
 			System.out.println("Qual valor do Deposito?");
 			depositodaConta = teclado.nextDouble();
@@ -34,12 +33,12 @@ public class ProgramaBanco {
 		//Instanciando Objeto ContaBancaria + Construtor
 		ContaBancaria contabancaria = new ContaBancaria(numerodaConta, nomedaConta, depositodaConta);
 		System.out.println(contabancaria);
-		//Chamando método adicionaSaldo
+		//Chamando mÃ©todo adicionaSaldo
 		System.out.println("Informe outro valor de Deposito:");
 		double valor2 = teclado.nextDouble();
 		contabancaria.adicionaSaldo(valor2);
 		System.out.println("Saldo Atualizado da " + contabancaria);	
-		//Chamando método removeSaldo
+		//Chamando mÃ©todo removeSaldo
 		System.out.println("Informe um valor de Saque:");
 		double valor3 = teclado.nextDouble();
 		contabancaria.removeSaldo(valor3);
