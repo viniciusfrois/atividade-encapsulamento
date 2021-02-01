@@ -6,13 +6,13 @@ public class ContaBancaria {
 	private String nomeConta;
 	private double depositoConta;
 	
-	//Contrutor
+	//Construtor
 	public ContaBancaria(int numeroConta, String nomeConta, double depositoConta) {
 		this.numeroConta = numeroConta;
 		this.nomeConta = nomeConta;
 		adicionaSaldo(depositoConta);
 	}
-	//Getter e Setter para Acessar ou Modificar os Atributos Privados *NumeroConta e Deposito só GET
+	//Getter e Setter para Acessar ou Modificar os Atributos Privados *NumeroConta e Deposito sÃ³ GET
 	public int getNumeroConta() {
 		return numeroConta;
 	}
